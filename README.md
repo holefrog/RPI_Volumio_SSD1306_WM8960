@@ -3,8 +3,8 @@ Raspberry Pi 4B running Volumio with an SSD1306 LCD and a WM8960 DAC board. S
 queezelite MC installed, functioning as a Lyrion Music Server player.
 
 # Main.py
-When the RPI is booting, display "Booting, please wait..."
-When Volumio is ready, display "Volumio ready."
+When the RPI is booting, display "Booting, Wait"
+When Volumio is ready, display "Volumio, ready."
 Then, begin the main loop.
 
 Still in the **very beginning** stage. 
@@ -15,8 +15,8 @@ If it gets stuck at "Volumio ready.", you will need to manually delete main.py f
 # Install
 ####################################################################
 1. Copy all file in same folder.(/home/volumio)
-2. Copy ssd_disp.service to /etc/systemd/system/
-3. Start Service
+2. sudo chmod +x ./install.sh
+3. sudo ./install.sh
 ```
 sudo systemctl daemon-reload
 sudo systemctl enable volumio_display.service
