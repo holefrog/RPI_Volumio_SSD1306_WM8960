@@ -9,7 +9,7 @@ Then, begin the main loop.
 
 Still in the **very beginning** stage. 
 
-If it gets stuck at "Volumio ready.", you will need to manually delete main.py from the SD card.
+If it gets stuck at "Volumio ready.", you will need to manually delete main.py from the SD card. (volumio_data/dyn/home/volumio/)
 
 ####################################################################
 # Install
