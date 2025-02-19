@@ -14,9 +14,14 @@ If it gets stuck at "Volumio ready.", you will need to manually delete main.py f
 ####################################################################
 # Install
 ####################################################################
-1. Copy all file in same folder.
-2. Modify config.ini. Set up LMS server IP/port. And RPI Mac address (wireless or wired), as player_id.
-
+1. Copy all file in same folder.(/home/volumio)
+2. Copy ssd_disp.service to /etc/systemd/system/
+3. Start Service
+```
+sudo systemctl daemon-reload
+sudo systemctl enable volumio_display.service
+sudo systemctl restart volumio_display.service
+```
    
 
 ####################################################################
