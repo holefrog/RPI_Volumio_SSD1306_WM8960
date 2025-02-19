@@ -7,7 +7,9 @@ When the RPI is booting, display "Booting, please wait..."
 When Volumio is ready, display "Volumio ready."
 Then, begin the main loop.
 
-Still in the **very beginning** stage.
+Still in the **very beginning** stage. 
+
+If it gets stuck at "Volumio ready.", you will need to manually delete main.py from the SD card.
 
 ####################################################################
 # Install
