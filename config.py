@@ -1,12 +1,14 @@
 import configparser
 import os
+import logging
 
 CONFIG_FILE = "config.ini"
 
 def load_config():
     config = configparser.ConfigParser()
+    # Check if the config file exists
     if not os.path.exists(CONFIG_FILE):
-        print("Error: No config.ini found. Creating default config.ini...")
+        logging.error("Error: No config.ini found. Creating default config.ini...")
         create_default_config()
         exit(1)
 
@@ -19,7 +21,7 @@ def load_config():
         return host_ip, host_port, player_id
 
     except (configparser.NoSectionError, configparser.NoOptionError):
-        print("Error: Invalid config.ini format. Please check your configuration.")
+        logging.error("Error: Invalid config.ini format. Please check your configuration.")
         exit(1)
 
 def create_default_config():
@@ -34,5 +36,5 @@ def create_default_config():
     with open(CONFIG_FILE, "w") as configfile:
         config.write(configfile)
 
-    print("Default config.ini created. Please edit it and restart the script.")
+    logging.info("Default config.ini created. Please edit it and restart the script.")
 

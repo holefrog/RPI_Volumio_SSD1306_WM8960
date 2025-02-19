@@ -1,5 +1,6 @@
 import time
 import threading
+import logging
 import Adafruit_SSD1306
 from PIL import Image, ImageDraw, ImageFont
 
@@ -17,7 +18,7 @@ try:
     font_small = ImageFont.truetype("./msyh.ttf", 14)
     font_large = ImageFont.truetype("./msyh.ttf", 22)
 except Exception as e:
-    print(f"An unknown error occurred: {e}, loading default font.")
+    logging.error(f"An unknown error occurred: {e}, loading default font.")
     font_small = ImageFont.load_default()
     font_large = ImageFont.load_default()
 
