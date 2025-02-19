@@ -11,22 +11,13 @@ Still in the **very beginning** stage.
 
 If it gets stuck at "Volumio ready.", you will need to manually delete main.py from the SD card. (volumio_data/dyn/home/volumio/)
 
-####################################################################
 # Install
-####################################################################
 1. Copy all file in same folder.(/home/volumio)
 2. sudo chmod +x ./install.sh
 3. sudo ./install.sh
-```
-sudo systemctl daemon-reload
-sudo systemctl enable volumio_display.service
-sudo systemctl restart volumio_display.service
-```
    
 
-####################################################################
 # WM8960
-####################################################################
 # Ref
 [https://www.waveshare.com/wiki/WM8960_Audio_HAT]
 
