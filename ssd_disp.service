@@ -1,0 +1,19 @@
+[Unit]
+Description=Volumio Display Service
+After=network.target syslog.target multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/volumio/main.py
+WorkingDirectory=/home/volumio/
+StandardOutput=file:/var/log/volumio_display.log
+StandardError=file:/var/log/volumio_display_error.log
+Restart=always
+User=volumio
+Group=volumio
+Environment=PYTHONUNBUFFERED=1
+LimitNOFILE=4096
+LimitNPROC=4096
+
+[Install]
+WantedBy=multi-user.target
+
